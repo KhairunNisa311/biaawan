@@ -53,4 +53,5 @@ Auth::routes(['verify' => true]);
 Route::get('/migration', function () {
     Artisan::call('migrate:fresh');
     Artisan::call('db:seed');
+    Artisan::call('storage:link');
 });
