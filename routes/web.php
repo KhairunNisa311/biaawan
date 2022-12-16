@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -48,3 +49,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 Auth::routes(['verify' => true]);
+
+Route::get('/migration', function () {
+    Artisan::call('migrate:fresh');
+    Artisan::call('db:seed');
+});
