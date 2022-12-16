@@ -14,7 +14,7 @@ class CreateUserRolesUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('roles')->default('user');
+            $table->string('roles')->default('admin');
         });
     }
 
