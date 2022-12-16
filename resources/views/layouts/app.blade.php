@@ -1,6 +1,7 @@
 @include('layouts.header')
 
 <body>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
           
